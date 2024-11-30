@@ -1,0 +1,17 @@
+{
+    "gameTitle": "Game 1",
+    "images": {
+        "image1": "assets/game1-image1.jpg",
+        "image2": "assets/game1-image2.jpg"
+    },
+    "differences": [
+        { "x": 120, "y": 94, "width": 35, "height": 36},
+        { "x": 226, "y": 65, "width": 16, "height": 18},
+        { "x": 305, "y": 190, "width": 21, "height": 21},
+        { "x": 503, "y": 125, "width": 45, "height": 47},
+        { "x": 562, "y": 223, "width": 24, "height": 39},
+        { "x": 73, "y": 366, "width": 41, "height": 27},
+        { "x": 330, "y": 387, "width": 31, "height": 25},
+        { "x": 506, "y": 421, "width": 36, "height": 39}
+    ]
+}

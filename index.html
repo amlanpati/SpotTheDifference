@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spot the Difference - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Spot the Difference</h1>
+  </header>
+  <main>
+    <div class="game-options">
+      <div class="game-card" onclick="navigateToGame('game1')">
+        <i class="fas fa-play"></i>
+        <h2>Game 1</h2>
+      </div>
+      <div class="game-card" onclick="navigateToGame('game2')">
+        <i class="fas fa-play"></i>
+        <h2>Game 2</h2>
+      </div>
+      <div class="game-card" onclick="navigateToGame('game3')">
+        <i class="fas fa-play"></i>
+        <h2>Game 3</h2>
+      </div>
+    </div>
+    <div style="padding: 2.5em; font-size: large;">Check solved images here: <a href="assets/game1-solved.jpg">Game 1</a> <a href="assets/game2-solved.jpeg">Game 2</a> <a href="assets/game3-solved.jpg">Game 3</a></div>
+  </main>
+  <footer>
+    <p>© 2024 Spot the Difference</p>
+  </footer>
+  <script>
+    // Clear stale `currentGame` value on page load
+    window.onload = () => {
+      localStorage.removeItem('currentGame');
+      console.log('Cleared stale currentGame value');
+    };
+    // Navigate to the respective game page
+    function navigateToGame(gameId) {
+      localStorage.setItem('currentGame', gameId);
+      console.log(`Game selected: ${gameId}`);
+      window.location.href = 'game.html';
+    }
+  </script>
+</body>
+
+</html>

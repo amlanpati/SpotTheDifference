@@ -1,0 +1,168 @@
+/* General Styles */
+body {
+  font-family: 'Caveat', cursive;
+  margin: 0;
+  padding: 0;
+  background-color: #264653;
+  color: #e9c46a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+div > a {
+  text-decoration: none;
+  color: #e76f51;
+}
+
+main {
+  width: 100vw;
+  margin: auto;
+  padding: 1em;
+  text-align: center;
+}
+
+/* Header */
+header {
+  width: 100vw;
+  text-align: center;
+  background-color: #2a9d8f;
+  padding: 1em;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3em;
+}
+
+h2 {
+  margin: 0.5em 0 1em;
+  font-size: 2em;
+  color: #264653;
+}
+
+/* Game Options */
+.game-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.game-card {
+  background-color: #f4a261;
+  border: 2px solid #e76f51;
+  border-radius: 8px;
+  width: 300px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.game-card i {
+  font-size: 2.5em;
+  color: #264653;
+}
+
+.game-card h2 {
+  margin-top: 0.5em;
+  color: #264653;
+}
+
+#game-container {
+  padding: 0.5em;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  min-width: 90vw;
+  margin: 2em;
+  background: #f4a261;
+  justify-content: center;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.image-wrapper {
+  position: relative;
+  max-width: 100%;
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 625px;
+  height: 500px;
+  display: block;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  position: relative;
+  z-index: 5;
+}
+
+canvas {
+  position: absolute;
+  top: 2px;
+  left: 70px;
+  width: 625px;
+  height: 500px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #2a9d8f;
+  width: 100vw;
+  font-size: large;
+}
+
+footer button {
+  background-color: #e76f51;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+footer button:hover {
+  background-color: #f4a261;
+}
+
+#scoreboard {
+  margin: 1.5em 0;
+  font-size: 1.5em;
+  color: #264653;
+}
+
+#scoreboard p {
+  margin: 0.5em 0;
+}
+
+#message {
+  font-size: 1.2em;
+  color: #264653;
+}

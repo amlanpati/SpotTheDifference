@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spot the Difference</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Spot the Difference</h1>
+    </header>
+    <main id="game-container">
+        <h2 id="game-title">Game 1</h2>
+        <div class="images">
+            <div class="image-wrapper">
+                <img id="image1" src="" alt="Image 1">
+                <canvas id="canvas1" width="625" height="500"></canvas>
+            </div>
+            <div class="image-wrapper">
+                <img id="image2" src="" alt="Image 2">
+                <canvas id="canvas2" width="625" height="500"></canvas>
+            </div>
+        </div>
+        <div id="scoreboard">
+            <p>Score: <span id="score">0</span></p>
+            <p>Time: <span id="timer">0:00</span></p>
+        </div>
+        <div id="message"></div>
+    </main>
+    <footer>
+        <button onclick="window.location.href='index.html'">Back to Home</button>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
