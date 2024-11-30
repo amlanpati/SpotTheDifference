@@ -1,5 +1,4 @@
-# SpotTheDifference
-Spot the difference game using HTML, CSS and JS.
+# Spot the Difference Game
 
 ## Instructions
 1. Open `index.html` in a browser.

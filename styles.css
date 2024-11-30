@@ -128,10 +128,10 @@ canvas {
 
 footer {
   text-align: center;
-  padding: 1em;
+  padding: 0.25em;
   background-color: #2a9d8f;
   width: 100vw;
-  font-size: large;
+  font-size: 2em;
 }
 
 footer button {
@@ -139,9 +139,10 @@ footer button {
   color: #fff;
   border: none;
   padding: 0.5em 1em;
-  font-size: 1.2em;
+  font-size: 0.5em;
   border-radius: 5px;
   cursor: pointer;
+  width: 20em;
   transition: background-color 0.2s ease;
 }
 
