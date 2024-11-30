@@ -29,7 +29,8 @@
         <h2>Game 3</h2>
       </div>
     </div>
-    <div style="padding: 2.5em; font-size: large;">Check solved images here: <a href="assets/game1-solved.jpg">Game 1</a> <a href="assets/game2-solved.jpeg">Game 2</a> <a href="assets/game3-solved.jpg">Game 3</a></div>
+    <div style="padding: 2.5em; font-size: large;">Check solved images here: <a href="assets/game1-solved.jpg">Game
+        1</a> <a href="assets/game2-solved.jpeg">Game 2</a> <a href="assets/game3-solved.jpg">Game 3</a></div>
   </main>
   <footer>
     <p>© 2024 Spot the Difference</p>
@@ -38,12 +39,12 @@
     // Clear stale `currentGame` value on page load
     window.onload = () => {
       localStorage.removeItem('currentGame');
-      console.log('Cleared stale currentGame value');
+      //console.log('Cleared stale currentGame value');
     };
     // Navigate to the respective game page
     function navigateToGame(gameId) {
       localStorage.setItem('currentGame', gameId);
-      console.log(`Game selected: ${gameId}`);
+      //console.log(`Game selected: ${gameId}`);
       window.location.href = 'game.html';
     }
   </script>

@@ -1,21 +1,21 @@
 {
     "gameTitle": "Game 3",
     "images": {
-      "image1": "assets/game3-image1.jpg",
-      "image2": "assets/game3-image2.jpg"
+        "image1": "assets/game3-image1.jpg",
+        "image2": "assets/game3-image2.jpg"
     },
     "differences": [
         { "x": 143, "y": 46, "width": 33, "height": 34 },
         { "x": 236, "y": 43, "width": 85, "height": 86 },
-        { "x": 395, "y": 127, "width": 50, "height": 28 },
+        { "x": 395, "y": 117, "width": 50, "height": 38 },
         { "x": 392, "y": 158, "width": 47, "height": 25 },
         { "x": 472, "y": 187, "width": 20, "height": 43 },
-        { "x": 500, "y": 311, "width": 27, "height": 26 },
-        { "x": 206, "y": 216, "width": 29, "height": 58 },
+        { "x": 500, "y": 311, "width": 37, "height": 36 },
+        { "x": 206, "y": 216, "width": 30, "height": 58 },
         { "x": 50, "y": 434, "width": 52, "height": 45 },
         { "x": 22, "y": 330, "width": 115, "height": 72 },
         { "x": 277, "y": 371, "width": 31, "height": 34 },
-        { "x": 332, "y": 211, "width": 20, "height": 22 },
+        { "x": 332, "y": 201, "width": 30, "height": 32 },
         { "x": 152, "y": 353, "width": 34, "height": 38 }
     ]
   }

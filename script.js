@@ -7,7 +7,7 @@ const messageDisplay = document.getElementById('message');
 async function loadGameConfig() {
   const gameId = localStorage.getItem('currentGame');
   if (!gameId) {
-    console.warn("No game selected. Redirecting to home...");
+    //console.warn("No game selected. Redirecting to home...");
     window.location.href = 'index.html'; // Redirect to index.html if no game is selected
     return;
   }
@@ -16,11 +16,11 @@ async function loadGameConfig() {
     const response = await fetch(`${gameId}-config.json`);
     if (!response.ok) throw new Error(`Failed to load configuration for ${gameId}`);
     config = await response.json();
-    console.log(`Loading configuration for: ${gameId}`);
-    console.log("Game configuration loaded:", config);
+    //console.log(`Loading configuration for: ${gameId}`);
+    //console.log("Game configuration loaded:", config);
     setupGame();
   } catch (error) {
-    console.error("Error loading game configuration:", error);
+    //console.error("Error loading game configuration:", error);
     alert("Could not load game configuration. Please try again.");
     window.location.href = 'index.html'; // Redirect to index.html on error
   }
@@ -28,7 +28,7 @@ async function loadGameConfig() {
 
 // Set up the game
 function setupGame() {
-  console.log("Setting up the game...");
+  //console.log("Setting up the game...");
 
   // Update game title
   document.getElementById('game-title').innerText = config.gameTitle;
@@ -54,8 +54,8 @@ function setupGame() {
 
 // Highlight differences on click
 function setupCanvas(canvas, differences, canvasName) {
-  console.log(`Setting up ${canvasName}...`);
-  console.log("Differences passed to setupCanvas:", differences);
+  //console.log(`Setting up ${canvasName}...`);
+  //console.log("Differences passed to setupCanvas:", differences);
   const ctx = canvas.getContext('2d');
   const image = canvas.previousElementSibling;
 
@@ -75,22 +75,26 @@ function setupCanvas(canvas, differences, canvasName) {
   //window.addEventListener('resize', resizeCanvas);
 
   canvas.addEventListener('click', (event) => {
-    console.log(`${canvasName} clicked.`);
-    console.log(`Canvas clicked at: ${event.clientX}, ${event.clientY}`);
+    //console.log(`${canvasName} clicked.`);
+    //console.log(`Canvas clicked at: ${event.clientX}, ${event.clientY}`);
     const rect = canvas.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
-    console.log(`Click coordinates: x=${x}, y=${y}`);
+    //console.log(`Click coordinates: x=${x}, y=${y}`);
 
     // Calculate scale factors
     const scaleX = image.clientWidth / 650; // Original image width
     const scaleY = image.clientHeight / 500; // Original image height
+    //console.log(image.clientWidth);
+    //console.log(image.clientWidth);
+    //console.log(scaleX);
+    //console.log(scaleY);
 
     // Scale the click coordinates
     const scaledX = x / scaleX;
     const scaledY = y / scaleY;
 
-    console.log(`Scaled click coordinates: x=${scaledX}, y=${scaledY}`);
+    //console.log(`Scaled click coordinates: x=${scaledX}, y=${scaledY}`);
 
     // Check if the scaled click is within any difference
     const hit = differences.find(diff =>
@@ -102,21 +106,21 @@ function setupCanvas(canvas, differences, canvasName) {
 
     if (hit) {
       console.log("Hit detected:", hit);
-      console.log('Drawing rectangle at:', hit.x, hit.y, hit.width, hit.height);
+      //console.log('Drawing rectangle at:', hit.x * scaleX, hit.y * scaleY, hit.width * scaleX, hit.height * scaleY);
       ctx.strokeStyle = 'red';
       ctx.lineWidth = 2;
 
       // Draw the rectangle with scaling applied
       ctx.strokeRect(
-        hit.x * scaleX,
-        hit.y * scaleY,
-        hit.width * scaleX,
-        hit.height * scaleY
+        hit.x,
+        hit.y,
+        hit.width,
+        hit.height
       );
 
       score++;
       scoreDisplay.innerText = score;
-      console.log(`Score updated: ${score}`);
+      //console.log(`Score updated: ${score}`);
 
       // Remove the found difference
       differences.splice(differences.indexOf(hit), 1);
@@ -143,7 +147,7 @@ function startTimer() {
 function endGame() {
   clearInterval(interval);
   messageDisplay.innerText = "Congratulations! You found all the differences!";
-  console.log("Game ended. All differences found!");
+  //console.log("Game ended. All differences found!");
 }
 
 // Load game configuration when the page is loaded

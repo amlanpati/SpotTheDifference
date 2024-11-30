@@ -6,12 +6,12 @@
     },
     "differences": [
         { "x": 120, "y": 94, "width": 35, "height": 36},
-        { "x": 226, "y": 65, "width": 16, "height": 18},
-        { "x": 305, "y": 190, "width": 21, "height": 21},
+        { "x": 226, "y": 65, "width": 30, "height": 30},
+        { "x": 300, "y": 185, "width": 35, "height": 35},
         { "x": 503, "y": 125, "width": 45, "height": 47},
-        { "x": 562, "y": 223, "width": 24, "height": 39},
-        { "x": 73, "y": 366, "width": 41, "height": 27},
-        { "x": 330, "y": 387, "width": 31, "height": 25},
-        { "x": 506, "y": 421, "width": 36, "height": 39}
+        { "x": 565, "y": 223, "width": 40, "height": 40},
+        { "x": 73, "y": 366, "width": 45, "height": 30},
+        { "x": 330, "y": 375, "width": 40, "height": 40},
+        { "x": 510, "y": 420, "width": 40, "height": 40}
     ]
 }
